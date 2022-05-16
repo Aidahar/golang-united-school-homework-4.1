@@ -2,11 +2,11 @@ package reverse_string
 
 func ReverseString(input string) (output string) {
 	// solution goes here
-	strLen := len(input) - 1
-	bytStr := []byte(input)
-	var ans []byte
+	runStr := []rune(input)
+	strLen := len(runStr) - 1
+	var ans []rune
 	for i := strLen; i >= 0; i-- {
-		ans = append(ans, bytStr[i])
+		ans = append(ans, runStr[i])
 	}
 	output = string(ans)
 	return output
